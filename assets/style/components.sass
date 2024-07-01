@@ -1,8 +1,29 @@
-@mixin primary-button 
+@mixin button
   display: inline-block
   padding: 10px 20px
   border: 2px solid #000000
   text-decoration: none
+  transition: background-color 0.3s
+  
+@mixin primary-button 
+  @include button
   color: #FFFFFF
   background-color: #000000
-  transition: background-color 0.3s
+
+  &:hover
+    background-color: #333333
+
+@mixin secondary-button
+  @include button
+  color: #000000
+  background-color: #FFFFFF
+
+  &:hover
+    background-color: #E0E0E0
+
+.primary_button 
+  @include primary-button
+
+.secondary_button
+  @include secondary-button
+  
