@@ -3,6 +3,6 @@
 </template>
 
 <style lang="sass" scoped>
-// button
-//   @include primary-button
+button
+  @include primary-button
 </style>

@@ -1,8 +1,31 @@
 @import 'vars'
-  
+
+@mixin base-panel
+  font-family: Arial, sans-serif
+  margin: $no-margin
+  padding: $no-padding
+  background-color: $white-color
+  color: $back-color
+
+@mixin panel-container
+  max-width: 1200px
+  margin: $no-margin auto
+  padding: $large-padding
+
+@mixin text($s)
+  margin: $large-margin $no-margin
+  font-size: $s
+
+@mixin headline($s)
+  font-weight: bold
+  @include text($s)
+
+@mixin paragraph($s)
+  @include text($s)
+
 @mixin button
   display: inline-block
-  padding: 10px 20px
+  padding: $small-padding $large-padding
   border: 2px solid $back-color
   text-decoration: none
   transition: background-color 0.3s
@@ -22,6 +45,12 @@
 
   &:hover
     background-color: $light-white-color
+
+@mixin card
+  border: 2px solid $back-color
+  padding: $large-padding
+  margin: $large-margin $no-margin
+  background-color: $white-color
 
 .primary_button 
   @include primary-button
