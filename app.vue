@@ -3,13 +3,13 @@
     <PrimaryButton />
     <SecondaryButton />
   </div>
-  <main>
-    <aside>
+  <main class="flex">
+    <aside class="basis-1/3 px-16 py-24">
       <figure>
         <img src="" alt="">
       </figure>
       <section>
-        <h2>MY CONTACT</h2>
+        <h2 class="font-poppins text-lg font-bold">MY CONTACT</h2>
         <hgroup>
           <h3>Phone</h3>
           <p>0912345678</p>
