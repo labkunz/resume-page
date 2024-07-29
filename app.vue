@@ -1,11 +1,7 @@
 <template>
-  <div class="flex item-center justify-center gap-8">
-    <PrimaryButton />
-    <SecondaryButton />
-  </div>
   <main class="flex">
     <aside class="basis-1/3 px-16 py-24 bg-[#666666]">
-      <figure class="w-full min-h-20">
+      <figure class="w-[100px] min-h-20">
         <img class="object-cover object-center" src="./assets/img/resume_picture.jpg" alt="resume_picture">
       </figure>
       <section>
@@ -29,22 +25,22 @@
         <ul>
           <li class="font-poppins text-[11px] text-[#ffffff]">Html</li>
           <li class="font-poppins text-[11px] text-[#ffffff]">CSS</li>
-          <li>JavaScript</li>
-          <li>Vue</li>
-          <li>Nuxt</li>
-          <li>React</li>
-          <li>Scss</li>
-          <li>tailwind css</li>
-          <li>RWD</li>
-          <li>Bootstrap</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">JavaScript</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">Vue</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">Nuxt</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">React</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">Scss</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">tailwind css</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">RWD</li>
+          <li class="font-poppins text-[11px] text-[#ffffff]">Bootstrap</li>
         </ul>
       </section>
     </aside>
     <section class="bg-[#ffffff]">
       <header>
         <hgroup>
-          <h1>Kent Chen</h1>
-          <p>Front-end engineer</p>
+          <h1 class="font-poppins text-[48px] text-[#595656] font-bold">Kent Chen</h1>
+          <p class="font-poppins text-[24px] text-[#595656]">Front-end engineer</p>
         </hgroup>
       </header>
       <article>
@@ -53,36 +49,44 @@
       </article>
       <article>
         <h2 class="font-poppins text-lg text-[#595656] font-bold">EXPERIENCE</h2>
-        <div class="work-e-item">
-          <hgroup>
-            <h3></h3>
-            <p></p>
-          </hgroup>
-          <p></p>
-        </div>
-        <div class="work-e-item">
-          <hgroup>
-            <h3></h3>
-            <p></p>
-          </hgroup>
-          <p></p>
+        <div class="flex flex-col gap-16">
+          <!-- work-e-item -->
+          <div class="flex flex-col gap-8">
+            <hgroup>
+              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">AviviD.ai | 2023 - 2024</h3>
+              <p class="font-poppins text-[11px] text-[#595656]">JavaScript engineer</p>
+            </hgroup>
+            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+          </div>
+          <!-- work-e-item -->
+          <div class="flex flex-col gap-8">
+            <hgroup>
+              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">Syncteck | 2020 - 2022</h3>
+              <p class="font-poppins text-[11px] text-[#595656]">RD</p>
+            </hgroup>
+            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+          </div>
         </div>
       </article>
       <article>
         <h2 class="font-poppins text-lg text-[#595656] font-bold">EDUCATION</h2>
-        <div class="school-e-item">
-          <hgroup>
-            <h3></h3>
-            <p></p>
-          </hgroup>
-          <p></p>
-        </div>
-        <div class="school-e-item">
-          <hgroup>
-            <h3></h3>
-            <p></p>
-          </hgroup>
-          <p></p>
+        <div class="flex flex-col gap-16">
+          <!-- school-e-item -->
+          <div class="flex justify-between">
+            <hgroup>
+              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">2018</h3>
+              <p class="font-poppins text-[11px] text-[#595656]">Ming Chuan University</p>
+            </hgroup>
+            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+          </div>
+          <!-- school-e-item -->
+          <div class="flex justify-between">
+            <hgroup>
+              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">2016</h3>
+              <p class="font-poppins text-[11px] text-[#595656]">Ming Chuan University</p>
+            </hgroup>
+            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+          </div>
         </div>
       </article>
     </section>
