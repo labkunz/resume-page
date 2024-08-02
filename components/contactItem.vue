@@ -1,7 +1,7 @@
 <template>
     <hgroup>
         <h3 class="font-poppins text-[15px] text-[#ffffff] font-bold">{{ props.title }}</h3>
-        <p class="font-poppins text-[11px] text-[#ffffff]">{{ props.content }}</p>
+        <p class="asideContent">{{ props.content }}</p>
     </hgroup>
 </template>
 
