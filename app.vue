@@ -7,18 +7,9 @@
       <section>
         <!-- can apply -->
         <h2 class="font-poppins text-lg text-[#ffffff] font-bold">MY CONTACT</h2>
-        <hgroup>
-          <h3 class="font-poppins text-[15px] text-[#ffffff] font-bold">Phone</h3>
-          <p class="font-poppins text-[11px] text-[#ffffff]">0912345678</p>
-        </hgroup>
-        <hgroup>
-          <h3 class="font-poppins text-[15px] text-[#ffffff] font-bold">Email</h3>
-          <p class="font-poppins text-[11px] text-[#ffffff]">example@gmail.com</p>
-        </hgroup>
-        <hgroup>
-          <h3 class="font-poppins text-[15px] text-[#ffffff] font-bold">Address</h3>
-          <p class="font-poppins text-[11px] text-[#ffffff]">4654564564646</p>
-        </hgroup>
+        <template v-for="item in contactData">
+          <ContactItem v-bind="item" />
+        </template>
       </section>
       <section>
         <h2 class="font-poppins text-lg text-[#ffffff] font-bold">SKILLS</h2>
@@ -92,3 +83,27 @@
     </section>
   </main>
 </template>
+
+<script>
+import { ref } from 'vue'
+export default {
+  setup () {
+    const contactData = ref([
+      {
+        title: "Phone",
+        content: "0912345678"
+      },
+      {
+        title: "Email",
+        content: "example@gamil.com"
+      },
+      {
+        title: "Address",
+        content: "456456456456"
+      }
+    ])
+
+    return { contactData }
+  }
+}
+</script>
