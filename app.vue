@@ -13,17 +13,8 @@
       </section>
       <section>
         <h2 class="font-poppins text-lg text-[#ffffff] font-bold">SKILLS</h2>
-        <ul>
-          <li class="font-poppins text-[11px] text-[#ffffff]">Html</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">CSS</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">JavaScript</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">Vue</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">Nuxt</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">React</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">Scss</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">tailwind css</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">RWD</li>
-          <li class="font-poppins text-[11px] text-[#ffffff]">Bootstrap</li>
+        <ul v-for="item in skillData">
+          <SkillItem v-bind="item" />
         </ul>
       </section>
     </aside>
@@ -102,8 +93,21 @@ export default {
         content: "456456456456"
       }
     ])
+    const skillData = ref([
+      { name: "Html" },
+      { name: "CSS" },
+      { name: "JavaScript" },
+      { name: "Vue" },
+      { name: "Nuxt" },
+      { name: "React" },
+      { name: "Scss" },
+      { name: "tailwind" },
+      { name: "RWD" },
+      { name: "Bootstrap" },
+    ])
 
-    return { contactData }
+
+    return { contactData, skillData }
   }
 }
 </script>
