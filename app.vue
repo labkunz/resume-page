@@ -13,8 +13,10 @@
       </section>
       <section>
         <h2 class="font-poppins text-lg text-[#ffffff] font-bold">SKILLS</h2>
-        <ul v-for="item in skillData">
-          <SkillItem v-bind="item" />
+        <ul>
+          <template v-for="item in skillData">
+            <SkillItem v-bind="item" />
+          </template>
         </ul>
       </section>
     </aside>
@@ -32,43 +34,17 @@
       <article>
         <h2 class="font-poppins text-lg text-[#595656] font-bold">EXPERIENCE</h2>
         <div class="flex flex-col gap-16">
-          <!-- work-e-item -->
-          <div class="flex flex-col gap-8">
-            <hgroup>
-              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">AviviD.ai | 2023 - 2024</h3>
-              <p class="font-poppins text-[11px] text-[#595656]">JavaScript engineer</p>
-            </hgroup>
-            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-          </div>
-          <!-- work-e-item -->
-          <div class="flex flex-col gap-8">
-            <hgroup>
-              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">Syncteck | 2020 - 2022</h3>
-              <p class="font-poppins text-[11px] text-[#595656]">RD</p>
-            </hgroup>
-            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-          </div>
+          <template v-for="item in workExperienceData">
+            <workExperienceItem v-bind="item" />
+          </template>
         </div>
       </article>
       <article>
         <h2 class="font-poppins text-lg text-[#595656] font-bold">EDUCATION</h2>
         <div class="flex flex-col gap-16">
-          <!-- school-e-item -->
-          <div class="flex justify-between">
-            <hgroup>
-              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">2018</h3>
-              <p class="font-poppins text-[11px] text-[#595656]">Ming Chuan University</p>
-            </hgroup>
-            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-          </div>
-          <!-- school-e-item -->
-          <div class="flex justify-between">
-            <hgroup>
-              <h3 class="font-poppins text-[11px] text-[#595656] font-bold">2016</h3>
-              <p class="font-poppins text-[11px] text-[#595656]">Ming Chuan University</p>
-            </hgroup>
-            <p class="font-poppins text-[11px] text-[#595656]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-          </div>
+          <template v-for="item in schoolExperienceData">
+            <schoolExperienceItem v-bind="item" />
+          </template>
         </div>
       </article>
     </section>
@@ -105,9 +81,37 @@ export default {
       { name: "RWD" },
       { name: "Bootstrap" },
     ])
+    const workExperienceData = ref([
+      { 
+        compeny: "AviviD.ai | 2023 - 2024",
+        jobTitle: "JavaScript engineer",
+        experience: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      },
+      { 
+        compeny: "Syncteck | 2020 - 2022",
+        jobTitle: "RD",
+        experience: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      }
+    ])
+    const schoolExperienceData = ref([
+      {
+        year: 2018,
+        name: "Ming Chuan University",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      },
+      {
+        year: 2016,
+        name: "Ming Chuan University",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+      }
+    ])
 
-
-    return { contactData, skillData }
+    return { 
+      contactData, 
+      skillData, 
+      workExperienceData,
+      schoolExperienceData
+    }
   }
 }
 </script>
